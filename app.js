@@ -42,9 +42,11 @@ function askManager() {
               break;
             case "Intern":
               // code block
+              askIntern();
               break;
             default :
               // code block
+              askManager();
           }
     }) 
   }
@@ -96,6 +98,29 @@ function askManager() {
         }
         ];
 
+        const internQuestions = [
+            {
+                type: 'input',
+                name: 'internName',
+                message: "What is your intern's name?",
+            },
+            {
+                type: 'input',
+                name: 'internID',
+                message: "What is your intern's ID number?",
+            },
+            {
+                type: 'input',
+                name: 'internEmail',
+                message: "What is your intern's email address?",
+            },
+            {
+                type: 'input',
+                name: 'internSchool',
+                message: "What is your intern's school or university?",
+            }
+            ];
+
     function askEngineer() {
         inquirer.prompt(engineerQuestions).then((answers) => {
             console.log('\nOrder receipt:');
@@ -104,42 +129,21 @@ function askManager() {
             employees.push(engineer)
             addMember();
           });
-    }
-        
+    };
 
-    // const engineerQuestions = [
-    //     {
-    //         type: 'input',
-    //         name: 'managerName',
-    //         message: "What is your manager's name?",
-    //     },
-    //     {
-    //         type: 'input',
-    //         name: 'managerID',
-    //         message: "What is your manager's ID number?",
-    //     },
-    //     {
-    //         type: 'input',
-    //         name: 'managerEmail',
-    //         message: "What is your manager's email address?",
-    //     },
-    //     {
-    //         type: 'input',
-    //         name: 'managerOfficeNumber',
-    //         message: "What is your manager's office number?",
-    //     },
-    //     {
-    //       type: 'list',
-    //       name: 'typeMember',
-    //       message: "Which type of team member would you like to add?",
-    //       choices: ['Engineer', 'Intern', "I don't want any other member"],
-    //     },
-    
-    // ];
-  
-  
-  
+   function askIntern() {
+        inquirer.prompt(internQuestions).then((answers) => {
+            console.log('\nOrder receipt:');
+            console.log(answers);
+            const intern = new Intern (answers.internName, answers.internID, answers.internEmail, answers.internSchool)
+            employees.push(intern)
+            addMember();
+          });
+    };
+          
   askManager();
+  askEngineer();
+  askIntern();
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
