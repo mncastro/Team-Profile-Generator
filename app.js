@@ -147,16 +147,20 @@ function askManager() {
           
   askManager();
 
-  function createTeam() {
-    fs.writeFile(outputPath, render(employees), html, "utf-8", function (err) {
-    if (err) throw (err);
-    console.log ("Creating your team site...");
-  });
-  
-
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
+
+  function createTeam() {
+    fs.writeFile(outputPath, render(employees), "utf-8", function (err) {
+    if (err) throw "there was an error";
+    console.log ("Creating your team site...");
+  });
+
+}
+  
+
+
 
 
 
@@ -174,4 +178,4 @@ function askManager() {
 // and Intern classes should all extend from a class named Employee; see the directions
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
-// for the provided `render` function to work! ```
+// for the provided render function to work.
