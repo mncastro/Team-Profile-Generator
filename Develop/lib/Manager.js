@@ -3,20 +3,19 @@
 const Employee = require("./Employee.js")
 
 class Manager extends Employee {
-    getName() {
-        return this.name;
+    const (name, id, email, officenumber) {
+        getName(name);
+        getID(id);
+        getEmail(email);
+        this.officenNumber = officeNumber;
+    } 
+
+    getOfficeNumber() {
+        this.officenumber
     }
-    getID(){
-        return this.id;
-    };
-    getEmail(){
-        return this.email;
-    }
-    getGithub(){
-        return this.github;
-    };
+
     getRole() {
-        return Engineer
+        return Manager
     }
 }
 
