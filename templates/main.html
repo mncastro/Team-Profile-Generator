@@ -13,32 +13,36 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <header class="container-fluid">
         <div class="row">
-            <div class="col-12 jumbotron mb-3 team-heading">
+            <div class="col-12 jumbotron mb-3 team-heading bg-danger text-light">
                 <h1 class="text-center">My Team</h1>
             </div>
         </div>
+    </header>
+
+            
+<div class="container"> 
+    <div class="team-area col-12 d-flex justify-content-center">
+                    <div class="card employee-card">
+            <div class="card-header bg-primary text-light">
+                <h2 class="card-title">{{ name }}</h2>
+                    <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }}</h3>
+            </div>
+    <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item">ID: {{ id }}</li>
+                <li class="list-group-item">Email: <a href="mailto:g@gmail.com">{{ email }}</a></li>
+                <li class="list-group-item">Office number: {{ officeNumber }}</li>
+            </ul>
     </div>
+
+
     <div class="container">
         <div class="row">
-            <div class="team-area col-12 d-flex justify-content-center">
+            <div class="column">
                 <div class="card employee-card">
-    <div class="card-header">
-        <h2 class="card-title">carl</h2>
-        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>Manager</h3>
-    </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item">ID: 4</li>
-            <li class="list-group-item">Email: <a href="mailto:g@gmail.com">g@gmail.com</a></li>
-            <li class="list-group-item">Office number: 56</li>
-        </ul>
-    </div>
-</div>
-
-                <div class="card employee-card">
-                    <div class="card-header">
+                    <div class="card-header bg-primary text-light">
                         <h2 class="card-title">{{ name }}</h2>
                         <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>{{ role }}</h3>
                     </div>
@@ -50,20 +54,30 @@
                         </ul>
                     </div>
                 </div>
-    <div class="card-header">
-        <h2 class="card-title">{{ name }}</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3>
+            </div>
+     
+<div class="container">        
+    <div class="column">
+        <div class="card-header bg-primary text-light">
+            <h2 class="card-title">{{ name }}</h2>
+            <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>{{ role }}</h3>
+        </div>
+        <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">ID: {{ id }}</li>
+                    <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
+                    <li class="list-group-item">GitHub: <a href="https://github.com/{{ github }}" target="_blank" rel="noopener noreferrer">{{ github }}</a></li>
+                </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-        <ul class="list-group">
-            <li class="list-group-item">ID: {{ id }}</li>
-            <li class="list-group-item">Email: <a href="mailto:{{ email }}">{{ email }}</a></li>
-            <li class="list-group-item">GitHub: <a href="https://github.com/{{ github }}" target="_blank" rel="noopener noreferrer">{{ github }}</a></li>
-        </ul>
-    </div>
-</div>
-<div class="card employee-card">
-    <div class="card-header">
+
+<div class="column">
+    <div class="card employee-card">
+    <div class="card-header bg-primary text-light">
         <h2 class="card-title">{{ name }}</h2>
         <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>{{ role }}</h3>
     </div>
@@ -75,9 +89,11 @@
         </ul>
     </div>
 </div>
+</div>
             </div>
         </div>
     </div>
+</div> 
 </body>
 
 </html>
