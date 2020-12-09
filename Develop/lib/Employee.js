@@ -5,7 +5,6 @@ class Employee {
       this.name = name;
       this.id = id;
       this.email = email;
-      this.github = github;
     }
 
     getName(){
@@ -18,10 +17,6 @@ class Employee {
 
     getEmail() {
         return this.email;
-    }
-
-    getGithub () {
-        return this.github;
     }
 
   }
