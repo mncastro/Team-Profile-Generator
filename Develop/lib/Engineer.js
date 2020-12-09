@@ -3,18 +3,17 @@
 const Employee = require("./Employee.js")
 
 class Engineer extends Employee {
-    getName() {
-        return this.name;
+    const (name, id, email, github) {
+        getName(name);
+        getID(id);
+        getEmail(email);
+        this.github = github;
+    } 
+
+    getGithub() {
+        return this.github
     }
-    getID(){
-        return this.id;
-    };
-    getEmail(){
-        return this.email;
-    }
-    getGithub(){
-        return this.github;
-    };
+
     getRole() {
         return Engineer
     }
