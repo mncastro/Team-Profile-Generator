@@ -5,7 +5,7 @@ const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
 
-const OUTPUT_DIR = path.resolve(__dirname, "./templates");
+const OUTPUT_DIR = path.resolve(__dirname, "./output");
 const outputPath = path.join(OUTPUT_DIR, "./main.html");
 
 const render = require("./lib/htmlRenderer");
@@ -19,7 +19,7 @@ function askManager() {
     inquirer.prompt(managerQuestions).then((answers) => {
         console.log('\nOrder receipt:');
         console.log(answers);
-        const manager = new Manager (answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNumber)
+        const manager = new Manager (answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber)
         employees.push(manager)
         addMember();
       });
@@ -64,7 +64,7 @@ function askManager() {
     },
     {
         type: 'input',
-        name: 'managerID',
+        name: 'managerId',
         message: "What is your manager's ID number?",
     },
     {
@@ -87,7 +87,7 @@ function askManager() {
         },
         {
             type: 'input',
-            name: 'engineerID',
+            name: 'engineerId',
             message: "What is your engineer's ID number?",
         },
         {
@@ -110,7 +110,7 @@ function askManager() {
             },
             {
                 type: 'input',
-                name: 'internID',
+                name: 'internId',
                 message: "What is your intern's ID number?",
             },
             {
@@ -129,7 +129,7 @@ function askManager() {
         inquirer.prompt(engineerQuestions).then((answers) => {
             console.log('\nOrder receipt:');
             console.log(answers);
-            const engineer = new Engineer (answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGithub)
+            const engineer = new Engineer (answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub)
             employees.push(engineer)
             addMember();
           });
@@ -139,7 +139,7 @@ function askManager() {
         inquirer.prompt(internQuestions).then((answers) => {
             console.log('\nOrder receipt:');
             console.log(answers);
-            const intern = new Intern (answers.internName, answers.internID, answers.internEmail, answers.internSchool)
+            const intern = new Intern (answers.internName, answers.internId, answers.internEmail, answers.internSchool)
             employees.push(intern)
             addMember();
           });
