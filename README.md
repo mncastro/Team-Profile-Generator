@@ -41,4 +41,4 @@ application.
 
 ![Team Summary](./Assets/team-profile-generator.png)
 
-[Link to .MOV video showcasing functionalities](https://drive.google.com/file/d/1C3Bu4uxOM6qXzl9b01in2RIwAxjsZrXL/view?usp=sharing)
+## [Link to .MOV video showcasing functionalities](https://drive.google.com/file/d/1C3Bu4uxOM6qXzl9b01in2RIwAxjsZrXL/view?usp=sharing)
