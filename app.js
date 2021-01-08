@@ -154,10 +154,10 @@ function askManager() {
   function createTeam() {
     fs.writeFile(outputPath, render(employees), "utf-8", function (err) {
     if (err) throw "there was an error";
-    console.log ("Creating your team site...");
+    console.log ("Creating your team site. Please check the main.html file inside the output folder..");
   });
 
-}
+};
   
 
 
