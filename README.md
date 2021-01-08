@@ -28,6 +28,12 @@ application.
 
 -Clean the HTML before adding the cards.
 
+### Tests
+
+-All tests passed using the Jest npm library.
+
+![Summary Test](./Assets/jest-test.png)
+
 ## Video and Pictures Showcasing Current Funcionalities
 
 ![Team Summary](./Assets/team-profile-generator.png)
