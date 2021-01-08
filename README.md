@@ -36,6 +36,9 @@ application.
 
 ## Video and Pictures Showcasing Current Funcionalities
 
+-Screenshot showing application's functionalities.
+-Video sampling the application and CLI tests.
+
 ![Team Summary](./Assets/team-profile-generator.png)
 
 [Link to .MOV video showcasing functionalities](https://drive.google.com/file/d/1C3Bu4uxOM6qXzl9b01in2RIwAxjsZrXL/view?usp=sharing)
